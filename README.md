@@ -10,8 +10,6 @@ This repository contains a **production-style implementation** of the Medallion 
 **Streaming (Event Hubs → Databricks Structured Streaming/Autoloader → Silver/Gold → Power BI)**  
 ![Streaming](resources/azure_streaming_pipeline_v2.png)
 
-**Combined View**  
-![Combined](resources/azure_combined_medallion_v2.png)
 
 ## 🧱 Components
 - **Azure Data Factory** – Orchestration of batch ingestion to ADLS Gen2 (Bronze).
