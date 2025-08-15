@@ -1,0 +1,6 @@
+{
+  "eventhubs.connectionString": "Endpoint=sb://<NAMESPACE>.servicebus.windows.net/;EntityPath=<EVENT_HUB_NAME>;SharedAccessKeyName=<POLICY_NAME>;SharedAccessKey=<KEY>",
+  "eventhubs.consumerGroup": "$Default",
+  "eventhubs.startingPosition": "@latest",
+  "eventhubs.maxEventsPerTrigger": "5000"
+}

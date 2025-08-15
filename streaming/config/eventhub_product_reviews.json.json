@@ -1,0 +1,32 @@
+{
+    "id": "/subscriptions/ca6afc3e-a087-4443-b6b9-8cf77aaf4f5a/resourceGroups/retail-rg/providers/Microsoft.EventHub/namespaces/retail-eh-ns/eventhubs/product-reviews",
+    "name": "product-reviews",
+    "type": "Microsoft.EventHub/namespaces/eventhubs",
+    "location": "centralus",
+    "properties": {
+        "messageRetentionInDays": 7,
+        "partitionCount": 2,
+        "status": "Active",
+        "createdAt": "2025-08-09T15:17:06.493",
+        "updatedAt": "2025-08-09T16:23:17.537",
+        "partitionIds": [
+            "0",
+            "1"
+        ],
+        "captureDescription": {
+            "enabled": true,
+            "encoding": "Avro",
+            "destination": {
+                "name": "EventHubArchive.AzureBlockBlob",
+                "properties": {
+                    "storageAccountResourceId": "/subscriptions/ca6afc3e-a087-4443-b6b9-8cf77aaf4f5a/resourceGroups/retail-rg/providers/Microsoft.Storage/storageAccounts/uclakesa01",
+                    "blobContainer": "ehcapture",
+                    "archiveNameFormat": "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}"
+                }
+            },
+            "intervalInSeconds": 60,
+            "sizeLimitInBytes": 20971520
+        }
+    },
+    "apiVersion": "2021-11-01"
+}
