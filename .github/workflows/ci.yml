@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python lint (basic)
+        uses: py-actions/flake8@v2
+        with:
+          args: "--ignore=E501"
+      - name: Validate JSON
+        run: |
+          python - <<'PY'
+          import json, glob, sys
+          for f in glob.glob('**/*.json', recursive=True):
+            try:
+              json.load(open(f))
+              print('OK', f)
+            except Exception as e:
+              print('BAD', f, e); sys.exit(1)
+          PY

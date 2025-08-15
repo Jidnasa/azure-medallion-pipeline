@@ -1,0 +1,30 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.class
+.ipynb_checkpoints/
+.DS_Store
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Databricks exports
+*.dbc
+*.dbx
+
+# Credentials / local configs
+*.secrets.json
+*config*.json
+.env
+*.crt
+*.pem
+
+# Power BI large binaries (prefer PBIP or screenshots)
+*.pbix
+
+# Logs
+logs/
+*.log

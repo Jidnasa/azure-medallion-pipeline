@@ -1,0 +1,20 @@
+{
+  "name": "pipeline_bronze",
+  "properties": {
+    "activities": [
+      {
+        "name": "CopyToBronze",
+        "type": "Copy",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "sourcePath": {
+        "type": "String"
+      },
+      "sinkPath": {
+        "type": "String"
+      }
+    }
+  }
+}
